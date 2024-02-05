@@ -1,6 +1,7 @@
 # python-api-challenge
 Module 6 Challenge Repo
 
+The files to be utilized for the Challenge are "WeatherPy_Final" and "VacationPy_Final." I have left both the starter code files as well as my "working" files in the code for reference, if needed. All outputs in the output folder should be based on my API requests while working on the challenge.
 
 Resources:
 
@@ -39,7 +40,7 @@ In the example above, we assume that you have a DataFrame df with a column named
 
 Please note that the column name and DataFrame variable in your case might be different, so make sure to replace them with your actual column name and DataFrame.
 
----
+-------
 
 Help from xpert Virtual assistant with coding the callable function properly:
 
@@ -142,6 +143,11 @@ To troubleshoot this issue, you can check the following:
 
 If you provide more specific details or code snippets, I can assist you further in resolving the issue.
 
+
+---------
+
+Help from Xpert Assistant with making sure the trenline prints properly on the plot:
+
 Student User Logo
 I have defined line_eq, but when using plt.annontate(), line_eq does not appear on the output graph.
 Xpert User Logo
@@ -164,6 +170,8 @@ If you have defined line_eq, but it is not appearing on the output graph when us
 
 If you provide more specific details or code snippets, I can assist you further in resolving the issue.
 
+
+Helo
 Student User Logo
 Everything for this code looks right, except the line_eq is not on the graph: x_values = northern_hemi_df["Lat"] y_values = northern_hemi_df["Max Temp"] plt.scatter(x_values, y_values) plt.xlabel('Latitude') plt.ylabel('Max Temp') slope, intercept, rvalue, regress_values, line_eq = lin_reg(x_values, y_values) plt.plot(x_values, regress_values, "r-") plt.annotate(line_eq, (7,0), fontsize=20, color="red") print(f'The r-value is: {rvalue}')
 Xpert User Logo
@@ -193,3 +201,45 @@ In the plt.annotate() function, (x_values.min(), y_values.max()) is used as the 
 
 By adjusting the coordinates to a visible location within the graph, the line_eq annotation should now appear on the graph.
 
+-------
+
+pandas copy method:
+
+https://www.w3schools.com/python/pandas/ref_df_copy.asp
+
+--------
+
+Asking xpert assistant for help with accessing a value in a dataframe while using iterrows. I realized after looking for help that I had already referenced the datafra, and did not need to do so again when defining latitude and longitude variables.
+
+
+Student User Logo
+when uising iterrows, how do I reference a specific entry in a dataframe for each row?
+Xpert User Logo
+
+When using iterrows() in Pandas, you can reference a specific entry in a DataFrame for each row by using the row index and column name. Here's an example:
+
+import pandas as pd
+
+# Create a sample DataFrame
+data = {'Name': ['John', 'Emma', 'Michael'],
+        'Age': [25, 30, 35],
+        'Country': ['USA', 'Canada', 'UK']}
+df = pd.DataFrame(data)
+
+# Iterate over the DataFrame using iterrows()
+for index, row in df.iterrows():
+    name = row['Name']  # Access the 'Name' column value for each row
+    age = row['Age']  # Access the 'Age' column value for each row
+    country = row['Country']  # Access the 'Country' column value for each row
+    
+    # Perform further operations with the values
+    print(f"Name: {name}, Age: {age}, Country: {country}")
+
+
+In this example, iterrows() is used to iterate over each row in the DataFrame. Inside the loop, you can access the values of specific columns for each row using the row object (row['column_name']).
+
+-----
+
+Reading supplementary information on jet streams and Earth's wind patterns:
+
+https://www.noaa.gov/jetstream/global/jet-stream
